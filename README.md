@@ -4,7 +4,7 @@
 
 ![status](https://img.shields.io/badge/status-week%200-lightgrey)
 ![python](https://img.shields.io/badge/python-3.11+-blue)
-![license](https://img.shields.io/badge/license-MIT-green)
+![license](https://img.shields.io/badge/license-Apache-green)
 
 ## What is this?
 
@@ -132,4 +132,4 @@ Built on the shoulders of open tools and data: Astropy, Lightkurve, Astroquery, 
 
 ## License
 
-MIT. See [`LICENSE`](LICENSE).
+Apache. See [`LICENSE`](LICENSE).
