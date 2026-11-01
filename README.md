@@ -4,7 +4,7 @@
 
 ![status](https://img.shields.io/badge/status-week%200-lightgrey)
 ![python](https://img.shields.io/badge/python-3.11+-blue)
-![license](https://img.shields.io/badge/license-Apache-green)
+![license](https://img.shields.io/badge/license-MIT-green)
 
 ## What is this?
 
@@ -52,14 +52,21 @@ cd lightcurve-anomalies
 python -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev]"
 
-# Fetch and cache a small demo set of known objects
-lca fetch --catalog configs/catalogs/known_objects.yaml
+# Smoke test: one sector per target from the seed list
+lca fetch --catalog configs/catalogs/known_objects.yaml --max-sectors 1
 
-# Plot one target
-lca plot --target "TIC 261136679" --mission tess
+# What came back?
+lca summary
+
+# Plot one target (by name from the catalog, or "TIC 261136679")
+lca plot --target "Pi Mensae"
+
+# Grow the sample: ~60 confirmed TESS planets from the NASA Exoplanet Archive
+lca catalog-toi --limit 60
+lca fetch --catalog configs/catalogs/toi_confirmed.yaml --max-sectors 2
 ```
 
-> The CLI (`lca`) is introduced in week 1; commands will grow as the weeks progress.
+> Week 1 commands: `fetch`, `plot`, `summary`, `catalog-toi`. More arrive as the weeks progress.
 
 ## Repository layout
 
@@ -125,4 +132,4 @@ Built on the shoulders of open tools and data: Astropy, Lightkurve, Astroquery, 
 
 ## License
 
-Apache 2.0. See [`LICENSE`](LICENSE).
+MIT. See [`LICENSE`](LICENSE).

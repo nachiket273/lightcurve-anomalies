@@ -1,0 +1,20 @@
+# Seed list for the week-1 smoke test. Names are resolved by MAST, so TESS coverage
+# is NOT guaranteed for every entry: `lca summary` shows what actually came back.
+# Grow this to ~100 objects during week 1 (see LOG.md for the curation plan).
+targets:
+  # --- transiting planets ---
+  - {name: "Pi Mensae", category: planet, note: "TIC 261136679; first TESS planet"}
+  - {name: "WASP-18", category: planet, note: "hot Jupiter, ~0.94 d"}
+  - {name: "WASP-121", category: planet}
+  - {name: "WASP-43", category: planet}
+  - {name: "LHS 3844", category: planet, note: "small planet, M dwarf"}
+  - {name: "TOI-700", category: planet}
+  - {name: "TOI-270", category: planet}
+  - {name: "HAT-P-7", category: planet, note: "Kepler field; coverage unverified"}
+  - {name: "KELT-9", category: planet, note: "ultra-hot Jupiter, A star"}
+  # --- flare stars ---
+  - {name: "AU Mic", category: flare_star}
+  - {name: "Proxima Cen", category: flare_star, note: "coverage unverified"}
+  # --- pulsators / eclipsing binaries (placeholders, curate from the TESS EB catalog) ---
+  - {name: "RR Lyr", category: rr_lyrae, note: "prototype; coverage unverified"}
+  - {name: "AI Phe", category: eclipsing_binary, note: "coverage unverified"}
